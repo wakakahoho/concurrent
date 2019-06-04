@@ -1,0 +1,22 @@
+#target/
+target/
+
+# IDEA #
+.idea/
+*.iml
+
+# Eclipse #
+.settings/
+.classpath
+.project
+
+# Log #
+logs/
+*.log
+*.log%
+
+#mac
+.DS_Store
+
+#svn
+.svn
