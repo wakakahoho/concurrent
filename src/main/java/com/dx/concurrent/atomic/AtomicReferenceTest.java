@@ -40,6 +40,8 @@ import lombok.ToString;
  *              push A
  *
  *                t2先执行，t1看到栈顶是A 以为正确，在出栈A的时候，事实上B已经不在了，在的是C，这时就和预期情况不一致，产生并发问题，那是什么原因导致的呢？最终是 Stack需要通过节点之间的指针来连接，而Integer、Long并没有这些即不可变的。
+ *                那么有没有什么办法解决这种ABA问题呢？
+ *                在数据库中实现乐观锁的方式是加上一个版本号，同样在juc中也有AtomicStampedReference
  **/
 public class AtomicReferenceTest {
 
